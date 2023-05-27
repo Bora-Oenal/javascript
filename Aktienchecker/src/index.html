@@ -7,146 +7,65 @@
 
         <link rel="stylesheet" href="main.css">
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
         <title>Aktienchecker</title>
     </head>
     <body>
         <div class="container-sm pt-3">
-            <!-- Hero -->
-            <div
-                class="container-fluid py-5 mb-4 d-flex justify-content-center"
-                style="  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1124&amp;q=100');
-        background-position: center;
-    background-size:cover;
-    background-repeat:no-repeat">
-                <div
-                    class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12"
-                    style=" backdrop-filter: blur(6px) saturate(102%);
-        -webkit-backdrop-filter: blur(6px) saturate(102%);
-        background-color: rgba(255, 255, 255, 0.45);
-        border-radius: 12px;
-        border: 1px solid rgba(209, 213, 219, 0.3);">
-                    <div class="lc-block">
-                        <div editable="rich">
-                            <h2 class="fw-bolder display-3">Aktienchecker</h2>
-                        </div>
-                    </div>
-                    <div class="lc-block col-md-8">
-                        <div editable="rich">
-                            <p class="lead">Mein Projekt: Aktiengewinn - Berechner
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hero -->
 
             <!-- Form -->
             <form>
                 <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row mb-4">
-                    <div class="col">
-                        <div class="form-outline">
-                            <input type="text" id="buy-price" class="form-control"/>
-                            <label class="form-label" for="form3Example1">Kaufkurs</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-outline">
-                            <input type="text" id="current-price" class="form-control"/>
-                            <label class="form-label" for="form3Example2">Aktueller Kurs</label>
-                        </div>
-                    </div>
-                </div>
+                <div class="container">
+                    <br>
+                    <br>
+                    <br>
+                    <h1>Aktien-Berechner</h1>
+                    <p class="lead">Berechne Veränderung in % seit Aktienkauf</p>
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4">
+                            <p>Bitte geben sie Einstiegskurs und aktuellen Kurs ein
+                            </p>
 
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">Calculate</button>
-            </form>
+                            <!--Eingabefeld Einstiegskurs-->
+                            <!-- Info: the name attribute is used for posting to e.g. a database webserver. The id is primarily used for css (and javascript) -->
+                            <br/>
+                            <label for="start" class="label-own">Einstiegskurs in €:
+                            </label>
+                            <br/>
+                            <input type="text" id="start" name="start">
 
-            <!-- Accordion -->
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
-                            aria-expanded="true"
-                            aria-controls="collapseOne">
-                            Accordion Item #1
-                        </button>
-                    </h2>
-                    <div
-                        id="collapseOne"
-                        class="accordion-collapse collapse show"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong>
-                            It is shown by default, until the collapse plugin adds the appropriate classes
-                            that we use to style each element. These classes control the overall appearance,
-                            as well as the showing and hiding via CSS transitions. You can modify any of
-                            this with custom CSS or overriding our default variables. It's also worth noting
-                            that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
+                            <!--Eingabefeld Körpergröße-->
+                            <br/>
+                            <label for="now" class="label-own">Aktueller Kurs in €:
+                            </label>
+                            <br/>
+                            <input type="text" id="now" name="now">
+
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <p class="headline">Ergebnis in %
+                            </p>
+                            <p id="result"></p>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo">
-                            Accordion Item #2
-                        </button>
-                    </h2>
-                    <div
-                        id="collapseTwo"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong>
-                            It is hidden by default, until the collapse plugin adds the appropriate classes
-                            that we use to style each element. These classes control the overall appearance,
-                            as well as the showing and hiding via CSS transitions. You can modify any of
-                            this with custom CSS or overriding our default variables. It's also worth noting
-                            that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div
-                        id="collapseThree"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong>
-                            It is hidden by default, until the collapse plugin adds the appropriate classes
-                            that we use to style each element. These classes control the overall appearance,
-                            as well as the showing and hiding via CSS transitions. You can modify any of
-                            this with custom CSS or overriding our default variables. It's also worth noting
-                            that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow. stra
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <!-- /.container -->
+                    <!-- JS -->
+                    <script src="js/projekt-aktiengewinn.js"></script>
+                </body>
+
+            </html>
+
+            <!-- Submit button -->
+            <button id="calculate" class="btn btn-primary btn-block mb-4">Calculate</button>
+        </form>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <p class="headline">Ergebnis in %
+            </p>
+            <p id="result"></p>
         </div>
-    </body>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
