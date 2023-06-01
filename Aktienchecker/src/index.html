@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="main.css">
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Aktienchecker</title>
-    </head>
-    <body>
-        <div class="container-sm pt-3">
+    <link rel="stylesheet" href="main.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-            <!-- Form -->
-            <form>
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="container">
-                    <br>
-                    <br>
-                    <br>
-                    <h1>Aktien-Berechner</h1>
-                    <p class="lead">Berechne Veränderung in % seit Aktienkauf</p>
-                    <div class="row">
-                        <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4">
-                            <p>Bitte geben sie Einstiegskurs und aktuellen Kurs ein
-                            </p>
+    <title>Aktienchecker</title>
+</head>
 
-                            <!--Eingabefeld Einstiegskurs-->
-                            <!-- Info: the name attribute is used for posting to e.g. a database webserver. The id is primarily used for css (and javascript) -->
-                            <br/>
-                            <label for="start" class="label-own">Einstiegskurs in €:
-                            </label>
-                            <br/>
-                            <input type="text" id="start" name="start">
+<body>
+    <div class="container-sm pt-3">
 
-                            <!--Eingabefeld Körpergröße-->
-                            <br/>
-                            <label for="now" class="label-own">Aktueller Kurs in €:
-                            </label>
-                            <br/>
-                            <input type="text" id="now" name="now">
+        <!-- Form -->
+        <form>
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="container">
+                <br>
+                <h1>Aktien-Berechner</h1>
+                <br>
+                <br>
+                <p class="lead">Berechne Veränderung in % seit Aktienkauf</p>
+                <div class="row">
+                    <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4">
+                        <p>Bitte geben sie Einstiegskurs und aktuellen Kurs ein
+                        </p>
 
-                        </div>
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <p class="headline">Ergebnis in %
-                            </p>
-                            <p id="result"></p>
-                        </div>
+                        <!--Eingabefeld Einstiegskurs-->
+                        <!-- Info: the name attribute is used for posting to e.g. a database webserver. The id is primarily used for css (and javascript) -->
+                        <br />
+                        <label for="start" class="label-own">Einstiegskurs in €:
+                        </label>
+                        <br />
+                        <input type="text" id="start" name="start">
+
+                        <!--Eingabefeld Körpergröße-->
+                        <br />
+                        <br />
+                        <label for="now" class="label-own">Aktueller Kurs in €:
+                        </label>
+                        <br />
+                        <input type="text" id="now" name="now">
+
                     </div>
-                    <!-- /.container -->
-                    <!-- JS -->
-                    <script src="js/projekt-aktiengewinn.js"></script>
-                </body>
-
-            </html>
-
-            <!-- Submit button -->
-            <button id="calculate" class="btn btn-primary btn-block mb-4">Calculate</button>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <p class="headline">Ergebnis in %
+                        </p>
+                        <p id="result"></p>
+                    </div>
+                </div>
+                <!-- /.container -->
+                <!-- Submit button -->
+                <button id="calculate" class="btn btn-primary btn-block mb-4">Calculate</button>
         </form>
-
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <p class="headline">Ergebnis in %
-            </p>
             <p id="result"></p>
         </div>
     </div>
+    <!-- JS -->
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -12023,4 +12023,29 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+h1, .h1 {
+  background-color: #f9e29d;
+  padding: 20px 5px;
+}
+
+#calculate {
+  margin-top: 32px;
+}
+
+/* Result Customizations */
+p.headline {
+  font-size: 30px;
+  font-weight: 500;
+  background-color: gainsboro;
+}
+
+p#result {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+label.label-own {
+  margin: 0 0 5px;
 }/*# sourceMappingURL=main.css.map */

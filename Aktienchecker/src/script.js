@@ -3,7 +3,8 @@ window.addEventListener("load", function () {
     // ich hol bzw spreche zunächst das Element an das ein Ereignis auslöst -> hier also der Button 
     let button = document.getElementById("calculate");
     // der Button geklickt wird soll folgende Funktion aufgerufen werden...
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (event) {
+        event.preventDefault();
 
         // zunächst sprechen wir die Textfeldeingaben an und sichern diese in Variablen
         let startObj = document.getElementById("start");
@@ -26,10 +27,12 @@ window.addEventListener("load", function () {
         erg.innerHTML = Math.round(change * 100) / 100 + " %";
   
         if (change < 0){
-            document.getElementById("result").style.backgroundColor = "#ff5e5e";
+            document.getElementById("result").style.backgroundColor = "#fcd9d9";
            
         } else if (change == 0){
             document.getElementById("result").style.backgroundColor = "orange";
+        } else if (change > 0){
+            document.getElementById("result").style.backgroundColor = "#a6efa6";
         }
 
         /* oder kurz:
